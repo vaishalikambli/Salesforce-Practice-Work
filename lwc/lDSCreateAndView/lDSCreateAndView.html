@@ -1,0 +1,25 @@
+<template>
+  <lightning-card title="Account Details">
+    <lightning-layout>
+      <lightning-layout-item size="6">
+        <lightning-card title="Create New Account">
+          <lightning-input type="text" label="Account Name" name="accName" onchange={updateAccountFields}>
+          </lightning-input>
+          <lightning-input type="text" label="Account Number" name="accNumber" onchange={updateAccountFields}>
+          </lightning-input>
+          <lightning-input type="phone" label="Phone" name="accPhone" onchange={updateAccountFields}></lightning-input>
+          <lightning-button label="Create Account" onclick={CreateNewAccount} variant="brand"></lightning-button>
+        </lightning-card>
+      </lightning-layout-item>
+    </lightning-layout>
+    <lightning-layout>
+      <lightning-layout-item size="6">
+        <lightning-card title="View Account Record">
+          <lightning-formatted-text value={retrieveAccName} class="slds-col"></lightning-formatted-text>
+          <lightning-formatted-text value={retrieveAccNumber}  class="slds-col"></lightning-formatted-text>
+          <lightning-formatted-phone value={retrievePhone} class="slds-col"></lightning-formatted-phone>
+        </lightning-card>
+      </lightning-layout-item>
+    </lightning-layout>
+  </lightning-card>
+</template>

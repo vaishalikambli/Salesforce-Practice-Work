@@ -1,0 +1,15 @@
+<template>
+  <lightning-card title="Create New Opportunity">
+    <lightning-input name="oppName" type="text" label="Opportunity Name" onchange={updateOpportunityFieldsValue}></lightning-input>
+    <lightning-input name="closeDate" type="Date" label="Close Date" onchange={updateOpportunityFieldsValue}></lightning-input>
+    <lightning-combobox
+      name="oppStage"
+      label="Stage"
+      value={value}
+      placeholder="None"
+      options={stageOptions}
+      onchange={updateOpportunityFieldsValue} >
+    </lightning-combobox>
+    <lightning-button label="Create Opportunity" onclick={CreateNewOpportunity} variant="brand"></lightning-button>
+  </lightning-card>    
+</template>

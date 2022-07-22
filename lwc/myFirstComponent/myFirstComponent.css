@@ -1,0 +1,13 @@
+.MyFirstComponent h1{
+  background-color: aliceblue;
+  color: #00F;
+  padding: 15px 20px;
+}
+
+.redColor{
+  color: red;
+}
+
+.slds-form-element {
+  color: green;
+}

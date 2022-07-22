@@ -1,0 +1,7 @@
+<template>
+  <lightning-card title="Parent Component">
+    <h3 class="parent-input__h3">Student:</h3>
+    <lightning-input type="text" value={showOutput} label="Enter Students Name" onchange={selectStudentName} ></lightning-input>
+    <c-child-check-box oncheckboxselect={updateInputValues}></c-child-check-box>
+  </lightning-card>    
+</template>

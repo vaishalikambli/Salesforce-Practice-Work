@@ -1,0 +1,11 @@
+<template>
+  <h3>Students list shows when age is above 25 years</h3>
+  <template if:true={showStudent}>
+    <p>{studentDetail.Name} -- {studentDetail.Age}</p>
+  </template>
+
+  <h3>Students list</h3>
+  <template if:true={showStudentAge}>
+    <p>{studentDetail.Name} -- {studentDetail.Age}</p>
+  </template>
+</template>

@@ -1,0 +1,13 @@
+<template>
+  <lightning-card title="Search Account">
+    <lightning-input type="text" label="Enter Account Name" name="accName" onchange={searchRelatedAccounts}>
+    </lightning-input>
+    <div class="custom-dynamic-list" style="height: 300px;">
+    <lightning-datatable 
+        key-field={id} 
+        data={content} 
+        columns={tableColumns}>
+    </lightning-datatable>
+  </div>
+  </lightning-card>    
+</template>

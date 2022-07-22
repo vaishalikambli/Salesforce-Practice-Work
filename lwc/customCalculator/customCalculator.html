@@ -1,0 +1,29 @@
+<template>
+  <lightning-card title="Calculator">
+    <!-- Input fields fro Value1 and Value2 -->
+    <div class="slds-grid slds-wrap">
+      <div class="slds-col slds-size_3-of-6">
+        <lightning-input type="number" label="Value 1" placeholder="Enter value here" value={value1} onchange={getValue1}
+        class="slds-m-left_medium slds-m-right_medium"></lightning-input>
+      </div>
+      <div class="slds-col slds-size_3-of-6">
+        <lightning-input type="number" label="Value 2" placeholder="Enter value here" value={value2} onchange={getValue2}
+        class="slds-m-left_medium slds-m-right_medium"></lightning-input>
+      </div>
+      <div class="slds-col slds-size_1-of-1 slds-m-top_medium">
+        <p class="slds-m-left_medium"><strong>Output : </strong>{outputValue}</p>   
+      </div>    
+    </div>
+
+    <div class="slds-p-around_medium lgc-bg-inverse">
+      <!-- Button group: Operators buttons -->
+      <lightning-button-group class="slds-align_absolute-center">
+        <lightning-button label="+" variant="+" onclick={addition}></lightning-button>
+        <lightning-button label="-" variant="-" onclick={subtraction}></lightning-button>
+        <lightning-button label="*" variant="*" onclick={multiplication}></lightning-button>
+        <lightning-button label="/" variant="/" onclick={division}></lightning-button>
+        <lightning-button label="Swap" variant="Swap" onclick={swapNumbers}></lightning-button>
+      </lightning-button-group>
+    </div>
+  </lightning-card>
+</template>

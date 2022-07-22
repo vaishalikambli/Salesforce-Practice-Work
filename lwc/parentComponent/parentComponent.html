@@ -1,0 +1,10 @@
+<template>
+  <template for:each={students} for:item="student">
+    <c-child-component key={student.Name} student-detail={student}></c-child-component>
+  </template>
+
+  <h3>Dynamic List</h3>
+  <c-custom-dynamic-list content={dataList}></c-custom-dynamic-list>
+
+  <lightning-input type="text"></lightning-input>
+</template>

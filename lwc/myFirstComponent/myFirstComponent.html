@@ -1,0 +1,18 @@
+<template>
+  <div class="MyFirstComponent">
+    <h1>{greet}</h1>
+    <lightning-input class="redColor" type="text" label="Update Greeting Value" onchange={updateGreet}></lightning-input>
+    <lightning-input class="slds-form-element" type="text" label="Testing for custom class"></lightning-input>
+    <template if:true={hasValue}>
+      Hello All!!!
+    </template>
+
+    <template for:each={Students} for:item="student">
+      <p key={student}>{greet} {student}</p>
+    </template>
+
+    <template iterator:it={students}>
+      <p key={it.value}>{greet} {it.first} - {it.value} - {it.last}</p>
+    </template>
+  </div>    
+</template>
