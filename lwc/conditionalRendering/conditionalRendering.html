@@ -1,0 +1,18 @@
+<template>
+  <lightning-input type="checkbox" onchange={showDivHandler} label="Show div"></lightning-input>
+  <template if:true={displayDiv}>
+    <div>I'm here</div>
+  </template>
+  <template if:false={displayDiv}>
+    <div>I'm hidden</div>
+  </template>
+  
+  <template for:each={cityList} for:item="city">
+    <p key={city}>{city}</p>
+  </template>
+
+  <h1>Below is an example of iterator directive</h1>
+  <template iterator:it={cityList}>
+    <p key={it.value}>{it.value}</p>        
+  </template>
+</template>

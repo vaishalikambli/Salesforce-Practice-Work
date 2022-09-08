@@ -1,0 +1,10 @@
+<template>
+  <div class="custom-dynamic-list">
+      <lightning-datatable 
+              key-field={id} 
+              data={content} 
+              columns={tableColumns} 
+              onrowaction={bookCar}>
+      </lightning-datatable>
+  </div>
+</template>

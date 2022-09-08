@@ -1,0 +1,37 @@
+<template>
+  <lightning-card title="Simple Calculator" icon-name="standard:formula">
+    <lightning-layout multiple-rows>
+      <lightning-layout-item size="12" padding="around-medium">
+        <lightning-input type="number" name="firstNumber" onchange={numberChangeHandler}></lightning-input>
+      </lightning-layout-item>
+      <lightning-layout-item size="12" padding="around-medium">
+        <lightning-input type="number" name="secondNumber" onchange={numberChangeHandler}></lightning-input>
+      </lightning-layout-item>
+      <lightning-layout-item size="12" padding="around-medium">
+        <lightning-button-group>
+          <lightning-button type="button" label="Add" icon-name="utility:add" onclick={addHandler}></lightning-button>
+          <lightning-button type="button" label="Subtract" icon-name="utility:dash" onclick={subtractHandler}>
+          </lightning-button>
+          <lightning-button type="button" label="Multiply" icon-name="utility:close" onclick={multiplyHandler}>
+          </lightning-button>
+          <lightning-button type="button" label="Divide" icon-name="utility:magicwand" onclick={divideHandler}>
+          </lightning-button>
+        </lightning-button-group>
+      </lightning-layout-item>
+      <lightning-layout-item padding="around-medium">
+        <lightning-formatted-text value={finalResult}></lightning-formatted-text>
+      </lightning-layout-item>
+      <lightning-layout-item padding="around-medium">
+        <lightning-input label="Show previous result" type="checkbox" onchange={checkPreviousResultHandler}></lightning-input>
+      </lightning-layout-item>
+      <template if:true={showResult}>
+        <template iterator:it={previousResult}>
+          <p key={it.value}>{it.value}</p>        
+        </template>        
+      </template>     
+      <lightning-layout-item padding="around-medium">
+        <lightning-formatted-text value={finalResult}></lightning-formatted-text>
+      </lightning-layout-item>
+    </lightning-layout>
+  </lightning-card>
+</template>

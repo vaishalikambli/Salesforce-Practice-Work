@@ -5,9 +5,9 @@ trigger DeleteTaskSA on Task (before delete) {
     
     Id currentUserProfileId = Userinfo.getProfileId();
     String userProfileName = [SELECT Id, Name 
-				   	   		  FROM Profile 
-                       		  WHERE Id =: currentUserProfileId
-                  	  		 ].Name;
+                              FROM Profile 
+                              WHERE Id =: currentUserProfileId
+                             ].Name;
     
     if(Trigger.IsBefore){        
         if(Trigger.IsDelete){

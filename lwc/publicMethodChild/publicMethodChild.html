@@ -1,0 +1,12 @@
+<template>
+  <lightning-card title="Call Methods On Child Component">
+    <lightning-checkbox-group 
+      name="Checkbox Group" 
+      label="Marker Group" 
+      options={options} 
+      value={value}>
+    </lightning-checkbox-group>
+
+    <c-public-method-child></c-public-method-child>
+  </lightning-card>
+</template>
